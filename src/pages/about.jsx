@@ -1,22 +1,43 @@
-export default function About() {
+import { CheckCheckIcon, DumbbellIcon, SmileIcon } from "lucide-react";
+import React from "react";
+
+function about() {
   return (
-    <main className="mx-auto max-w-6xl px-4 py-16">
-      <div className="rounded-3xl bg-white/60 p-8 shadow-xl backdrop-blur-lg sm:p-16 ring-1 ring-slate-900/5 relative overflow-hidden group">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 to-fuchsia-50 opacity-50 transition-opacity duration-500 group-hover:opacity-80"></div>
-        <div className="relative">
-          <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-fuchsia-600">
-            About Us
-          </h1>
-          <div className="space-y-6 text-lg leading-relaxed text-slate-700">
-            <p>
-              Welcome to our platform. We are dedicated to delivering extraordinary experiences and pushing the boundaries of what is possible. Our team consists of passionate creators, engineers, and designers who believe in the power of innovation.
-            </p>
-            <p>
-              Founded on the principles of excellence and creativity, we continually strive to build solutions that not only meet your needs but exceed your expectations. Join us on our journey to shape the future.
-            </p>
-          </div>
+    <div className="flex justify-center gap-10 h-screen items-center flex-col ">
+      <div className="flex flex-col">
+        <h1 className="text-2xl text-emerald-500 font-extrabold hover:underline">About FlexPules</h1>
+      <p>
+        Bridging holistic wellness, community fitness, and high performance
+        athletic gear.
+      </p>
+      </div>
+      <div className="flex flex-col border border-white rounded-2xl p-5 gap-3 hover:border-emerald-500">
+        <h3 className="font-bold text-emerald-500">Our Mission</h3>
+        <p className="min-w-100 w-200">
+          At FlexPulse, we believe fitness is not a seasonal routine—it's a
+          lifestyle. We provide flexible digital access to world-class trainers,
+          studio-grade yoga streams, and trusted gym locations near you.
+        </p>
+      </div>
+      <div className="flex justify-evenly gap-8">
+        <div className="border border-white justify-center items-center gap-2 hover:border-emerald-500 w-50 h-40 rounded-4xl p-5 flex flex-col">
+          <DumbbellIcon className="font-bold text-emerald-300 "/>
+          <p className="font-bold text-2xl">5000+</p>
+          <p>Active Members</p>
+        </div>
+        <div className="border border-white justify-center items-center gap-2 hover:border-emerald-500 w-50 h-40 rounded-4xl p-5 flex flex-col">
+          <SmileIcon className="font-bold text-emerald-300 "/>
+          <p className="font-bold text-2xl">120+</p>
+          <p>Certified Yoga Instructors</p>
+        </div>
+        <div className="border border-white justify-center items-center gap-2 hover:border-emerald-500 w-50 h-40 rounded-4xl p-5 flex flex-col">
+          <CheckCheckIcon className="font-bold text-emerald-300 "/>
+          <p className="font-bold text-2xl">250+</p>
+          <p>Partner Gym Spots</p>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
+
+export default about;
